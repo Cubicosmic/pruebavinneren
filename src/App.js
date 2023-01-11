@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Foquito from './Foquito';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: "100%", height:"100vh", background: "linear-gradient(#DD3399, #33DD99)"}} className='flex'>
+      <div style={{width: "50%", height: "150px", borderRadius: "50px", background: "#DDDDDD"}} className='flex-a'>
+        <Foquito bg={'#FF0000'} dy={2} />
+        <Foquito bg={'#FFFF00'} dy={4} />
+        <Foquito bg={'#00FF00'} dy={6} />
+      </div>
     </div>
   );
 }
